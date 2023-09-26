@@ -18,6 +18,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
+      
     steps:
       - name: Sync with upstream repository
         uses: dabreadman/sync-upstream-repo@v1.3.0
